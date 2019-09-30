@@ -23,7 +23,8 @@ function getElementUI() {
       collapsable: false,
       children: [
         '',
-        'init'
+        'init',
+        'link'
       ]
     }
   ]
