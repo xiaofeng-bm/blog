@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: GO → 
-actionLink: /article/
+actionLink: /element/
 features:
 - title: 源码
   details: 包含element等源码的一些学习笔记

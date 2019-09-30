@@ -6,12 +6,27 @@ module.exports = {
       {
         text: '分类',
         items: [
-          { text: 'element-ui', link: '/article/element.md' },
+          { text: 'element-ui', link: '/element/' },
           { text: 'vue', link: '/article/vue.md' },
         ]
       }
-    ]
+    ],
+    sidebar: {
+      '/element/': getElementUI()
+    }
   }
+}
+
+function getElementUI() {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+        'init'
+      ]
+    }
+  ]
 }
 
 
