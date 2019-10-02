@@ -6,8 +6,8 @@ module.exports = {
       {
         text: '分类',
         items: [
-          { text: 'element-ui', link: '/element/' },
-          { text: 'vue', link: '/article/vue.md' },
+          { text: 'element-ui源码解析', link: '/element/' },
+          // { text: 'vue', link: '/article/vue.md' },
         ]
       }
     ],
@@ -23,8 +23,9 @@ function getElementUI() {
       collapsable: false,
       children: [
         '',
-        'init',
-        'link'
+        'explain',
+        // 'components/init',
+        // 'components/link'
       ]
     }
   ]
