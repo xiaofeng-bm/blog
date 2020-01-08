@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /hero.png
-actionText: GO → 
+actionText: to element-ui
 actionLink: /element/
 features:
 - title: 源码
