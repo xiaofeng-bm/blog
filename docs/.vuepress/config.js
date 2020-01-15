@@ -32,6 +32,7 @@ function getElementUI() {
       collapsable: false,
       children: [
         '',
+        'docs/description',
         'docs/init',
         // 'components/design',
         // 'components/input',

@@ -6,10 +6,10 @@
 npm init -y
 ```
 ## 目录创建
-在根目录下创建
+依照element-ui的目录结构创建如下目录：
 ``` 
 ├── examples                        // 演示实例
-├── package                         // element-ui组件放置位置
+├── packages                         // element-ui组件放置位置
 ├── src                             // element-ui入口文件
 ├── .gitignore                      // git忽略
 ├── package.json
