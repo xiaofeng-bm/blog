@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="./test.js"></script>
+</head>
+<body>
+  <button id="btn">点击</button>
+  
+  <script>
+    let btn = document.getElementById('btn');
+    btn.addEventListener('click', debounce(fn))
+  </script>
+</body>
+</html>

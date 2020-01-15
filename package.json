@@ -5,6 +5,7 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
+    "commitizen": "^4.0.3",
     "vuepress": "^1.1.0"
   },
   "config": {

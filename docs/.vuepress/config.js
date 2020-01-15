@@ -21,7 +21,7 @@ module.exports = {
       '/element/': getElementUI(),
       '/vue/': getVue(),
       '/blog/': getBlog(),
-      '/ts-axios/': getAxios()
+      // '/ts-axios/': getAxios()
     }
   }
 }
@@ -32,8 +32,9 @@ function getElementUI() {
       collapsable: false,
       children: [
         '',
-        'components/design',
-        'components/input',
+        'docs/init',
+        // 'components/design',
+        // 'components/input',
         // 'components/init',
         // 'components/link'
       ]
@@ -60,7 +61,8 @@ function getBlog() {
       children: [
         '',
         'number-precision',
-        'utils'
+        'utils',
+        'proxy'
       ]
     }
   ]
