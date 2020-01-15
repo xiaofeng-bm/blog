@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage: /hero.jpg
 actionText: to element-ui
 actionLink: /element/
 features:
