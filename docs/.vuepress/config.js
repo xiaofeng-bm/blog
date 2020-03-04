@@ -8,19 +8,21 @@ module.exports = {
         text: '分类',
         items: [
           { text: 'element-ui源码解析', link: '/element/' },
-          { text: 'vue', link: '/vue/' },
-          { text: 'ts-axios', link: '/ts-axios/' },
+          // { text: 'ts-axios', link: '/ts-axios/' },
         ]
       },
       {
         text: '博客',
-        link: '/blog/'
+        items: [
+          { text: '数据结构与算法', link: '/algorithm/' },
+          { text: 'leetcode', link: '/leetcode/' },
+        ]
       }
     ],
     sidebar: {
       '/element/': getElementUI(),
-      '/vue/': getVue(),
-      '/blog/': getBlog(),
+      '/algorithm/': getAlgorithm(),
+      '/leetcode': getLeetcode()
       // '/ts-axios/': getAxios()
     }
   }
@@ -33,23 +35,11 @@ function getElementUI() {
       children: [
         '',
         'docs/description',
-        'docs/init',
+        'docs/button',
         // 'components/design',
         // 'components/input',
         // 'components/init',
         // 'components/link'
-      ]
-    }
-  ]
-}
-
-function getVue() {
-  return [
-    {
-      collapsable: false,
-      children: [
-        '',
-        'chapter1/essence-of-comp'
       ]
     }
   ]
@@ -81,3 +71,26 @@ function getAxios() {
   ]
 }
 
+// 数据结构与算法笔记
+function getAlgorithm() {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+      ]
+    }
+  ]
+}
+
+// leetcode笔记
+function getLeetcode() {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+      ]
+    }
+  ]
+}
