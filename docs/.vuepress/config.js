@@ -78,6 +78,7 @@ function getAlgorithm() {
       collapsable: false,
       children: [
         '',
+        'docs/复杂度分析'
       ]
     }
   ]
