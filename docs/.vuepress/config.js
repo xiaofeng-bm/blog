@@ -15,15 +15,14 @@ module.exports = {
         text: '博客',
         items: [
           { text: '数据结构与算法', link: '/algorithm/' },
-          { text: 'leetcode', link: '/leetcode/' },
+          { text: 'leetcode解题', link: '/leetcode/' }
         ]
       }
     ],
     sidebar: {
       '/element/': getElementUI(),
       '/algorithm/': getAlgorithm(),
-      '/leetcode': getLeetcode()
-      // '/ts-axios/': getAxios()
+      '/leetcode/': getLeetcode()
     }
   }
 }
@@ -91,6 +90,7 @@ function getLeetcode() {
       collapsable: false,
       children: [
         '',
+        'docs/1.两数之和'
       ]
     }
   ]

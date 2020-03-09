@@ -1,2 +1,2 @@
-# 前言
-leetcode刷题笔记
+# 简介
+leetcode刷题记录
