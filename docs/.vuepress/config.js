@@ -34,11 +34,7 @@ function getElementUI() {
       children: [
         '',
         'docs/description',
-        'docs/button',
-        // 'components/design',
-        // 'components/input',
-        // 'components/init',
-        // 'components/link'
+        'docs/button'
       ]
     }
   ]
@@ -90,7 +86,8 @@ function getLeetcode() {
       collapsable: false,
       children: [
         '',
-        'docs/1.两数之和'
+        'docs/1.两数之和',
+        'docs/20.有效的括号'
       ]
     }
   ]
