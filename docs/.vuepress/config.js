@@ -14,6 +14,7 @@ module.exports = {
       },
       {
         text: '博客',
+        keys: ['123456'],
         items: [
           { text: '数据结构与算法', link: '/algorithm/' },
           { text: 'leetcode解题', link: '/leetcode/' }
@@ -23,7 +24,8 @@ module.exports = {
     sidebar: {
       '/element/': getElementUI(),
       '/algorithm/': getAlgorithm(),
-      '/leetcode/': getLeetcode()
+      '/leetcode/': getLeetcode(),
+      '/design_patterns/': getDesingPatterns()
     }
   }
 }
@@ -89,6 +91,18 @@ function getLeetcode() {
         '',
         'docs/1.两数之和',
         'docs/20.有效的括号'
+      ]
+    }
+  ]
+}
+
+// 设计模式与算法
+function getDesingPatterns() {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '01.test'
       ]
     }
   ]
