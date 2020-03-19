@@ -4,6 +4,12 @@ module.exports = {
   description: '前端学习路上的记录、总结',
   port: 3001,
   themeConfig: {
+    blogConfig: {
+      category: {
+        location: 2,     // 在导航栏菜单中所占的位置，默认2
+        text: 'Category' // 默认文案 “分类”
+      }
+    },
     nav: [
       {
         text: '分类',
@@ -13,11 +19,31 @@ module.exports = {
         ]
       },
       {
-        text: '博客',
-        keys: ['123456'],
+        text: '文章',
+        ariaLabel: '了解更多',
         items: [
-          { text: '数据结构与算法', link: '/algorithm/' },
-          { text: 'leetcode解题', link: '/leetcode/' }
+          { 
+            text: '', 
+            items: [
+              {
+                text: '数据结构与算法',
+                link: '/algorithm/', 
+              },
+              {
+                text: 'leetcode解题', 
+                link: '/leetcode/' 
+              }
+            ]
+          },
+          {
+            text: '',
+            items: [
+              {
+                text: '零碎',
+                link: '/blog/'
+              }
+            ]
+          }
         ]
       }
     ],
@@ -25,7 +51,7 @@ module.exports = {
       '/element/': getElementUI(),
       '/algorithm/': getAlgorithm(),
       '/leetcode/': getLeetcode(),
-      '/design_patterns/': getDesingPatterns()
+      '/blog/': getBlog()
     }
   }
 }
@@ -50,8 +76,6 @@ function getBlog() {
       children: [
         '',
         'number-precision',
-        'utils',
-        'proxy'
       ]
     }
   ]
@@ -90,19 +114,8 @@ function getLeetcode() {
       children: [
         '',
         'docs/1.两数之和',
+        'docs/7.整数反转',
         'docs/20.有效的括号'
-      ]
-    }
-  ]
-}
-
-// 设计模式与算法
-function getDesingPatterns() {
-  return [
-    {
-      collapsable: false,
-      children: [
-        '01.test'
       ]
     }
   ]
