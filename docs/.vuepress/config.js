@@ -4,12 +4,6 @@ module.exports = {
   description: '前端学习路上的记录、总结',
   port: 3001,
   themeConfig: {
-    blogConfig: {
-      category: {
-        location: 2,     // 在导航栏菜单中所占的位置，默认2
-        text: 'Category' // 默认文案 “分类”
-      }
-    },
     nav: [
       {
         text: '分类',
@@ -23,11 +17,14 @@ module.exports = {
         ariaLabel: '了解更多',
         items: [
           { 
-            text: '', 
             items: [
               {
                 text: '数据结构与算法',
                 link: '/algorithm/', 
+              },
+              {
+                text: 'js设计模式',
+                link: '/design-patterns/'
               },
               {
                 text: 'leetcode解题', 
@@ -36,7 +33,6 @@ module.exports = {
             ]
           },
           {
-            text: '',
             items: [
               {
                 text: '零碎',
@@ -50,6 +46,7 @@ module.exports = {
     sidebar: {
       '/element/': getElementUI(),
       '/algorithm/': getAlgorithm(),
+      '/design-patterns/': getDesignPatterns(),
       '/leetcode/': getLeetcode(),
       '/blog/': getBlog()
     }
@@ -101,6 +98,18 @@ function getAlgorithm() {
       children: [
         '',
         'docs/复杂度分析'
+      ]
+    }
+  ]
+}
+// js数据结构与算法
+function getDesignPatterns() {
+  return [
+    {
+      collapsable: false,
+      children: [
+        '',
+        'docs/工厂模式'
       ]
     }
   ]
