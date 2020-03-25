@@ -109,6 +109,7 @@ function getDesignPatterns() {
       collapsable: false,
       children: [
         '',
+        'docs/面对对象',
         'docs/工厂模式'
       ]
     }
