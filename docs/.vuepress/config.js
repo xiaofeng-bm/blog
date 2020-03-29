@@ -50,6 +50,16 @@ module.exports = {
       '/leetcode/': getLeetcode(),
       '/blog/': getBlog()
     }
+  },
+  plugins: {
+    '@vuepress/medium-zoom': {
+      selector: 'img.zoom-custom-imgs',
+      // medium-zoom options here
+      // See: https://github.com/francoischalifour/medium-zoom#options
+      options: {
+        margin: 16
+      }
+    }
   }
 }
 
@@ -60,7 +70,8 @@ function getElementUI() {
       children: [
         '',
         'docs/description',
-        'docs/button'
+        'docs/button',
+        'docs/layout'
       ]
     }
   ]

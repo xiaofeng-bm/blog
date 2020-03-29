@@ -76,8 +76,10 @@ export default ElButton;
 ```
 
 ### 样式文件介绍
-element-ui中所有组件的样式文件都放到了`package/theme-chalk`文件中，css是用sass来写的，通过gulp编译为普通的css。  
-button样式文件位于`package/theme-chalk/src/button.scss`中。你可以大致看一下，在下一节的button源码分析中，我会详细的介绍。
+element-ui中所有组件的样式文件都放到了`package/theme-chalk`文件中。<br/>  
+例如button组件的样式文件位于`package/theme-chalk/src/button.scss`中。感兴趣的可以深入了解一下，后面的文章会穿插讲一些css内容。<br/>
+
+整体上`element-ui`样式是用scss写的，并且遵循[BEM](https://github.com/Tencent/tmt-workflow/wiki/%E2%92%9B-%5B%E8%A7%84%E8%8C%83%5D--CSS-BEM-%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83)规范。最终通过gulp编译成普通的css
 
 ### 结语
 看完上面的你应该大致了解element-ui的工作原理了，可以自己试着走一遍流程

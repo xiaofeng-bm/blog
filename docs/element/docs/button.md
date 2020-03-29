@@ -1,4 +1,7 @@
-# button组件
+---
+title: button组件
+date: 2020-03-29
+---
 el-button组件是我们最常用的组件之一，源码也比较简单，上节介绍过，主要是通过slot承接组件内容，其余就是一些样式问题<br/>
 
 有一个注意点就是el-button中size，disabled等属性的设置，先看以下代码：
