@@ -4,6 +4,10 @@ module.exports = {
   description: '前端学习路上的记录、总结',
   port: 3001,
   themeConfig: {
+    valineConfig: {
+      appId: 'dB2GgqbmVNSdxBwgmEF0M8uo-gzGzoHsz',// your appId
+      appKey: 'oTWmYn4vcYcbCHwUF73sSMXA', // your appKey
+    },
     nav: [
       {
         text: '分类',
@@ -51,16 +55,6 @@ module.exports = {
       '/blog/': getBlog()
     }
   },
-  plugins: {
-    '@vuepress/medium-zoom': {
-      selector: 'img.zoom-custom-imgs',
-      // medium-zoom options here
-      // See: https://github.com/francoischalifour/medium-zoom#options
-      options: {
-        margin: 16
-      }
-    }
-  }
 }
 
 function getElementUI() {
