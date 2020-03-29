@@ -4,9 +4,9 @@ heroImage: /hero.jpg
 actionText: to element-ui
 actionLink: /element/
 features:
-- title: 源码
+- title: 源码解析
   details: 包含element等源码的一些学习笔记
-- title: 小技巧 
-  details: 记录平时工作、学习中学到的一些小技巧
+- title: 博客
+  details: 记录平时工作、学习中学到的一些知识
 ---
 
