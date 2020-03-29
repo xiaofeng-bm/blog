@@ -22,7 +22,7 @@
 ## 入口文件分析
 在看之前，最好先了解一下vue的[组件全局注册](https://cn.vuejs.org/v2/guide/components-registration.html#%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C)和[插件机制](https://cn.vuejs.org/v2/guide/plugins.html)。  
 
-入口文件唯一做了一件事，就是将所有组件注册为vue的全局组件。简化一下代码如下：
+入口文件做的事，就是将所有组件注册为vue的全局组件。简化一下代码如下：
 ```js
 import Button from '../packages/button/index.js';
 
