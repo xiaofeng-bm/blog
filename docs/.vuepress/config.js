@@ -65,7 +65,8 @@ function getElementUI() {
         '',
         'docs/description',
         'docs/button',
-        'docs/layout'
+        'docs/layout',
+        'docs/notification'
       ]
     }
   ]

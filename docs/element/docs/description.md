@@ -4,9 +4,9 @@
 <!-- 话不多说，直接从入口文件来看，element-ui是如何工作的 -->
 
 ## 主要目录介绍
-主要文件集中在在package和src目录下
+主要文件集中在在packages和src目录下
 ```bash
-|—— package                   // 组件源码都放在这个目录下
+|—— packages                   // 组件源码都放在这个目录下
     |—— button                // button组件代码
         |—— src
             |—— button.vue    // button组件源码              
@@ -22,9 +22,10 @@
 ## 入口文件分析
 在看之前，最好先了解一下vue的[组件全局注册](https://cn.vuejs.org/v2/guide/components-registration.html#%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C)和[插件机制](https://cn.vuejs.org/v2/guide/plugins.html)。  
 
-入口文件做的事，就是将所有组件注册为vue的全局组件。简化一下代码如下：
+入口文件位于`src/index.js`，主要就是将所有组件注册为vue的全局组件以及一些全局配置，在vue原型上添加组件等。简化一下代码如下：
 ```js
 import Button from '../packages/button/index.js';
+import Notification from '../packages/notification/index.js';
 
 const components = [
   Button
@@ -35,6 +36,8 @@ const install = function(Vue) {
   components.forEach(component => {
     Vue.component(component.name, component);
   });
+  // 将Notification挂载到vue原型上，在使用的时候，就可以通过this.$notify使用
+  Vue.prototype.$notify = Notification;
 }
 
 export default {
@@ -44,7 +47,7 @@ export default {
 
 ## button组件分析
 
-button组件源码位于`package/button`文件内，先看入口`index.js`文件：
+以`button`组件为例`button`组件源码位于`packages/button`文件内，先看入口`index.js`文件：
 ``` js
 import ElButton from './src/button';
 
@@ -59,10 +62,8 @@ export default ElButton;
 ```vue
 <template>
   <button>
-    <span>
-      <!-- 内部通过插槽来承接内容 --> 
-      <slot></slot>
-    </span>
+    <!-- 内部通过插槽来承接内容 --> 
+    <slot></slot>
   </button>
 </template>
 <script>
@@ -76,12 +77,13 @@ export default ElButton;
 ```
 
 ### 样式文件介绍
-element-ui中所有组件的样式文件都放到了`package/theme-chalk`文件中。<br/>  
-例如button组件的样式文件位于`package/theme-chalk/src/button.scss`中。感兴趣的可以深入了解一下，后面的文章会穿插讲一些css内容。<br/>
+element-ui中所有组件的样式文件都放到了`packages/theme-chalk`文件中。<br/>  
+例如button组件的样式文件位于`packages/theme-chalk/src/button.scss`中。感兴趣的可以深入了解一下，后面的文章会穿插讲一些css内容。<br/>
 
-整体上`element-ui`样式是用scss写的，并且遵循[BEM](https://github.com/Tencent/tmt-workflow/wiki/%E2%92%9B-%5B%E8%A7%84%E8%8C%83%5D--CSS-BEM-%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83)规范。最终通过gulp编译成普通的css
-
+整体上`element-ui`样式是用scss写的，并且遵循[BEM](https://github.com/Tencent/tmt-workflow/wiki/%E2%92%9B-%5B%E8%A7%84%E8%8C%83%5D--CSS-BEM-%E4%B9%A6%E5%86%99%E8%A7%84%E8%8C%83)规范。最终通过gulp编译成普通的css，编译到`lib`文件目录下最终我们使用的时候，就引用编译好的css，<br/>
+`import 'element-ui/lib/theme-chalk/index.css'`
 ### 结语
-看完上面的你应该大致了解element-ui的工作原理了，可以自己试着走一遍流程
+看完上面的你应该大致了解element-ui的工作原理了，可以自己试着走一遍流程。
 
+可以去我github地址，将其clone下来，仔细查看一下。
 [本节源码地址](https://github.com/xiaofeng-bm/learn-element-ui/tree/v1.0-init)
