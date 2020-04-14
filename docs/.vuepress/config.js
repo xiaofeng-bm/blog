@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/blog/',
   theme: 'reco',
   title: '晓枫博客',
   description: '前端学习路上的记录、总结',
@@ -52,7 +53,7 @@ module.exports = {
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
       '/leetcode/': getLeetcode(),
-      '/blog/': getBlog()
+      '/blog/': getBlog('JS', 'CSS', 'HTML')
     }
   },
 }
@@ -72,13 +73,23 @@ function getElementUI() {
   ]
 }
 
-function getBlog() {
+function getBlog(groupA, groupB, groupC) {
   return [
     {
+      title: groupA,
       collapsable: false,
       children: [
         '',
-        'number-precision',
+        'JS/number-precision',
+        'JS/utils'
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        'CSS/selectors',
+        'CSS/DOM树和CSSOM树'
       ]
     }
   ]
