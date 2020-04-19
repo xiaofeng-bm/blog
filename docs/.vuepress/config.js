@@ -88,7 +88,8 @@ function getBlog(groupA, groupB, groupC) {
       collapsable: false,
       children: [
         'CSS/selectors',
-        'CSS/DOM树和CSSOM树'
+        'CSS/DOM树和CSSOM树',
+        'CSS/重绘&重排'
       ]
     }
   ]
