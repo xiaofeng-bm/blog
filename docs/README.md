@@ -1,8 +1,8 @@
 ---
 home: true
-heroImage: /blog/hero.jpg
+heroImage: ./hero.jpg
 actionText: to element-ui
-actionLink: /blog/element/
+actionLink: /element/
 features:
 - title: 源码解析
   details: 包含element等源码的一些学习笔记
