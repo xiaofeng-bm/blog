@@ -40,7 +40,7 @@ module.exports = {
           {
             items: [
               {
-                text: '零碎',
+                text: '博客',
                 link: '/blog/'
               }
             ]
