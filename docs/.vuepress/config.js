@@ -67,7 +67,9 @@ function getElementUI() {
         'docs/description',
         'docs/button',
         'docs/layout',
-        'docs/notification'
+        'docs/input',
+        'docs/notification',
+        'docs/form/base'
       ]
     }
   ]
@@ -81,7 +83,8 @@ function getBlog(groupA, groupB, groupC) {
       children: [
         '',
         'JS/number-precision',
-        'JS/utils'
+        'JS/utils',
+        'JS/scrollTo'
       ]
     },
     {
@@ -90,7 +93,8 @@ function getBlog(groupA, groupB, groupC) {
       children: [
         'CSS/selectors',
         'CSS/DOM树和CSSOM树',
-        'CSS/重绘&重排'
+        'CSS/重绘&重排',
+        'CSS/移动端屏幕适配'
       ]
     }
   ]
