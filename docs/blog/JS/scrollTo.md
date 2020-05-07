@@ -29,32 +29,42 @@ Element.scrollTop 属性可以获取或设置一个元素的内容垂直滚动�
 
 
 ## 实现
-```js
-// 这个方法暂时没看懂，作用就是计算scrollTop的值，等数学好了在回来看看
+```ts
 const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
-  t /= d / 2
+  t /= d / 2;
   if (t < 1) {
-    return c / 2 * t * t + b
+    return (c / 2) * t * t + b;
   }
-  t--
-  return -c / 2 * (t * (t - 2) - 1) + b
-}
+  t--;
+  return (-c / 2) * (t * (t - 2) - 1) + b;
+};
 
 // 最后面哪个setTimeout是为了兼容不支持requestAnimationFrame的浏览器。
 const requestAnimFrame = (function() {
-  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || (window as any).mozRequestAnimationFrame || function(callback) { window.setTimeout(callback, 1000 / 60) }
-})()
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    (window as any).mozRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback, 1000 / 60);
+    }
+  );
+})();
 
 // 这里不太好检测滚动是哪个元素，所以干脆都移动了
-function move(amount) {
-  document.documentElement.scrollTop = amount
-  document.body.parentNode.scrollTop = amount
-  document.body.scrollTop = amount
+function move(amount: number) {
+  document.documentElement.scrollTop = amount;
+  (document.body.parentNode as HTMLElement).scrollTop = amount;
+  document.body.scrollTop = amount;
 }
 function position() {
-  return document.documentElement.scrollTop || document.body.parentNode.scrollTop || document.body.scrollTop
+  return (
+    document.documentElement.scrollTop ||
+    (document.body.parentNode as HTMLElement).scrollTop ||
+    document.body.scrollTop
+  );
 }
-export function scrollTo(to, duration, callback) {
+export function scrollTo(to: number, duration: number, callback?: Function) {
   // 开始滚动的位置
   const start = position();
   // 需要滚动的距离
@@ -65,19 +75,22 @@ export function scrollTo(to, duration, callback) {
   // 注：vue-element-admin中这个值是20，如果不考虑兼容性，我个人觉得应该设置为17毫秒，因为按照requestAnimationFrame回调函数每秒执行60此来算，每次花费16.666666毫秒，猜测设置为20毫秒是为了防止setTimeout出现延时造成问题吧。
   const increment = 20;
   // 持续时间，默认500毫秒
-  duration = (typeof (duration) === 'undefined') ? 500 : duration
+  duration = typeof duration === "undefined" ? 500 : duration;
 
   const animateScroll = function() {
     currentTime += increment;
     // 计算移动的距离
-    const val = easeInOutQuad(currentTime, start, change, durtion);
+    const val = easeInOutQuad(currentTime, start, change, duration);
     // 移动
-    move(val)
+    move(val);
 
-    if(currentTime < duration) {
-      requestAnimFrame(animateScroll)
+    if (currentTime < duration) {
+      // 递归调用
+      requestAnimFrame(animateScroll);
     }
-  }
+  };
+  animateScroll();
 }
+
 ```
 
