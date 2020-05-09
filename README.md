@@ -1,2 +1,2 @@
 # 博客
-[地址](https://xiaofeng-bm.github.io/)
+[地址](http://shiluyue.xyz/blog/)
