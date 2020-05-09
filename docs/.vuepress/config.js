@@ -23,14 +23,14 @@ module.exports = {
         items: [
           { 
             items: [
-              {
-                text: '数据结构与算法',
-                link: '/algorithm/', 
-              },
-              {
-                text: 'js设计模式',
-                link: '/design-patterns/'
-              },
+              // {
+              //   text: '数据结构与算法',
+              //   link: '/algorithm/', 
+              // },
+              // {
+              //   text: 'js设计模式',
+              //   link: '/design-patterns/'
+              // },
               {
                 text: 'leetcode解题', 
                 link: '/leetcode/' 
@@ -67,7 +67,7 @@ function getElementUI() {
         'docs/description',
         'docs/button',
         'docs/layout',
-        'docs/input',
+        // 'docs/input',
         'docs/notification',
         'docs/form/base'
       ]
