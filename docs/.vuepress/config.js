@@ -84,7 +84,8 @@ function getBlog(groupA, groupB, groupC) {
         '',
         'JS/number-precision',
         'JS/utils',
-        'JS/scrollTo'
+        'JS/scrollTo',
+        'JS/RegExp'
       ]
     },
     {
