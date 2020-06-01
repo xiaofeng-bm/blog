@@ -153,4 +153,4 @@ export default {
 ```
 
 ## 效果
-![table](../images/table/xf-table.png)
+![table](https://github.com/xiaofeng-bm/blog/blob/master/docs/element/images/table/xf-table.png)
