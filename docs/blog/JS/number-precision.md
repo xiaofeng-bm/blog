@@ -51,8 +51,14 @@ add(a, b)                 // 0.6                    正确
 
 
 ## 精确乘法
-思路：
-1、小数转整数 
-2、获取baseNum，小数位数相加。例：num1=11.11 num2=22.222   baseNum = 2+3 = 5
-3、判断整数相乘是否越界，如果越界了给出提示
-4、num
+思路：<br />
+1、小数转整数 <br/>
+2、获取baseNum，小数位数相加。例：num1=11.11 num2=22.222   baseNum = 2+3 = 5 <br/>
+3、判断整数相乘是否越界，如果越界了给出提示 <br />
+4、计算
+```js
+// 精确乘法
+function times(num1, num2) {
+  // const num1Changed = num1 * Math.pow(10, );
+}
+```

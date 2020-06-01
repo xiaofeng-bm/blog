@@ -4,7 +4,26 @@
 ## 深拷贝
 由于js的对象类型一般都是按引用传递的，最终都是指向一个内存地址，如果不注意的话，有时候改一个就可能导致很多地方改变。所以有时候我们需要对`Object`类型的数据进行深拷贝。
 
-先来实现一个简单的深拷贝
+### 方法一
+JSON.parse(JSON.stringify(obj))。<br />
+原理：先将对象转为字符串，在通过JSON.parse重新建立一个对象。<br />
+上面这种方式一般开发中用够了，但是数据中如果存在下面几种情况，就不能用这种方法了：
+```js
+// 问题一：不能复制function，正则，Symbol， undefined
+let obj = { 
+  reg: /^abc$/,
+  fn: function() {
+    console.log('hello world')
+  },
+  name: '隔壁老王'
+}
+console.log(JSON.parse(JSON.stringify(obj)))    // { reg: {}, name: '隔壁老王' }
+
+// 问题二引用的数据
+
+```
+
+<!-- 先来实现一个简单的深拷贝
 ```js
 function deepClone(source) {
   let targetObj = {};
@@ -72,3 +91,4 @@ function deepClone(source) {
   return targetObj
 }
 ```
+尝试一下： -->

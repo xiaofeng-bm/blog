@@ -23,10 +23,10 @@ module.exports = {
         items: [
           { 
             items: [
-              // {
-              //   text: '数据结构与算法',
-              //   link: '/algorithm/', 
-              // },
+              {
+                text: '数据结构与算法',
+                link: '/algorithm/', 
+              },
               // {
               //   text: 'js设计模式',
               //   link: '/design-patterns/'
@@ -69,7 +69,8 @@ function getElementUI() {
         'docs/layout',
         // 'docs/input',
         'docs/notification',
-        'docs/form/base'
+        // 'docs/form/base',
+        'docs/BmTable'
       ]
     }
   ]
@@ -84,7 +85,8 @@ function getBlog(groupA, groupB, groupC) {
         '',
         'JS/number-precision',
         'JS/utils',
-        'JS/scrollTo'
+        'JS/scrollTo',
+        'JS/RegExp'
       ]
     },
     {
@@ -119,7 +121,8 @@ function getAlgorithm() {
       collapsable: false,
       children: [
         '',
-        'docs/复杂度分析'
+        // 'docs/复杂度分析',
+        'docs/栈和队列'
       ]
     }
   ]
@@ -147,7 +150,8 @@ function getLeetcode() {
         '',
         'docs/1.两数之和',
         'docs/7.整数反转',
-        'docs/20.有效的括号'
+        'docs/20.有效的括号',
+        'docs/数组排序'
       ]
     }
   ]
