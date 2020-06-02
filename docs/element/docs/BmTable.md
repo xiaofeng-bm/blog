@@ -81,7 +81,7 @@ export default {
     <template v-for="column in config.config">
       <!-- 这里通过slot增加灵活性，将来如果某个列变负责了，后端处理不了了，就可以通过前端来处理 -->
       <slot :name="column.prop">
-        <el-table-column v-bind="column"></el-table-column>
+        <el-table-column v-bind="column" :key="column.prop + column.type"></el-table-column>
       </slot>
     </template>
     <!-- 后置插槽预留 -->
@@ -153,4 +153,4 @@ export default {
 ```
 
 ## 效果
-![table](https://github.com/xiaofeng-bm/blog/blob/master/docs/element/images/table/xf-table.png)
+![table](https://shiluyue.oss-cn-beijing.aliyuncs.com/xf-table.png)
