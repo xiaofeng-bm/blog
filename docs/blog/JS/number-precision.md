@@ -49,16 +49,7 @@ add(a, b)                 // 0.6                    正确
 ```
 减法同理
 
-
-## 精确乘法
-思路：<br />
-1、小数转整数 <br/>
-2、获取baseNum，小数位数相加。例：num1=11.11 num2=22.222   baseNum = 2+3 = 5 <br/>
-3、判断整数相乘是否越界，如果越界了给出提示 <br />
-4、计算
-```js
-// 精确乘法
-function times(num1, num2) {
-  // const num1Changed = num1 * Math.pow(10, );
-}
-```
+解决js中小数计算精度问题的思路就是转换为整数进行计算。<br/>
+推荐阅读：
+[JavaScript 浮点数陷阱及解法](https://github.com/camsong/blog/issues/9)
+[number-precision](https://github.com/nefe/number-precision)

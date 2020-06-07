@@ -11,13 +11,6 @@ module.exports = {
     },
     nav: [
       {
-        text: '分类',
-        items: [
-          { text: 'element-ui源码解析', link: '/element/' },
-          // { text: 'ts-axios', link: '/ts-axios/' },
-        ]
-      },
-      {
         text: '文章',
         ariaLabel: '了解更多',
         items: [
@@ -45,6 +38,13 @@ module.exports = {
               }
             ]
           }
+        ]
+      },
+      {
+        text: '源码分类',
+        items: [
+          { text: 'element-ui源码解析', link: '/element/' },
+          // { text: 'ts-axios', link: '/ts-axios/' },
         ]
       }
     ],
@@ -83,10 +83,12 @@ function getBlog(groupA, groupB, groupC) {
       collapsable: false,
       children: [
         '',
+        'JS/face-object',
         'JS/number-precision',
         'JS/utils',
         'JS/scrollTo',
-        'JS/RegExp'
+        'JS/RegExp',
+        'JS/unique'
       ]
     },
     {
