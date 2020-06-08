@@ -153,6 +153,7 @@ function getLeetcode() {
         'docs/1.两数之和',
         'docs/7.整数反转',
         'docs/20.有效的括号',
+        'docs/26.删除排序数组中的重复项',
         'docs/数组排序'
       ]
     }

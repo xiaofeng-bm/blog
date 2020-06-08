@@ -7,7 +7,7 @@
 
 
 ## 概念图示
-知乎中找到一张描述面对对象很经典的图。
+知乎中找到一张描述面对对象中一些概念很经典的图。
 ![face-object](../images/js/face_object.jpg)
 
 ## 工厂模式
@@ -189,3 +189,50 @@ let name = fn();
 name(); // 建林
 ```
 这样我们就可以在函数外边拿到函数内部的值了。看到这里你可能还是会觉得这有毛用啊，没错一开始我也是这样觉得，不就能访问到函数内部变量吗，咋这玩意吹的这么厉害。
+
+#### 闭包实际用途
+防抖函数在日常开发比较常用，实现一个简单的防抖函数。
+```html
+<button onclick="debounce(fn, 500)">点一下</button>
+```
+```js
+var timmer = '';
+function debounce(fn, wait) {
+  // 进来清除定时器
+  if(timmer) {
+    clearTimeout(timmer);
+    timmer = '';
+  }
+  timmer = setTimeout(function() {
+    fn()
+  }, wait)
+}
+function fn() {
+  console.log('点击了')
+}
+```
+上面代码实现了一个简单的防抖函数，但是存在一个问题，我们暴露了一个全局变量timmer。
+
+用闭包改写防抖函数：
+```html
+<button onclick="handleClick()">点一下</button>
+```
+```js
+function debounce(fn, wait) {
+  var timer = '';
+  return function () {
+    if (timer) {
+      clearTimeout(timer);
+      timer = '';
+    }
+    timer = setTimeout(function () {
+      fn();
+    }, wait);
+  };
+}
+function fn() {
+  console.log("点击了");
+}
+var handleClick = debounce(fn, 500)
+```
+改写后，我们就讲
