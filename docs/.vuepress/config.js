@@ -154,6 +154,7 @@ function getLeetcode() {
         'docs/7.整数反转',
         'docs/20.有效的括号',
         'docs/26.删除排序数组中的重复项',
+        'docs/27.移除元素',
         'docs/数组排序'
       ]
     }
