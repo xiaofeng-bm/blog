@@ -1,6 +1,6 @@
 #!/root/nginx/env sh
 
-cd blog
+# cd blog
 
 git pull 
 
