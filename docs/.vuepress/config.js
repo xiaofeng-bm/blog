@@ -11,15 +11,22 @@ module.exports = {
     },
     nav: [
       {
+        text: '源码分类',
+        items: [
+          { text: 'element-ui源码解析', link: '/element/' },
+          // { text: 'ts-axios', link: '/ts-axios/' },
+        ]
+      },
+      {
         text: '文章',
         ariaLabel: '了解更多',
         items: [
           { 
             items: [
-              {
-                text: '数据结构与算法',
-                link: '/algorithm/', 
-              },
+              // {
+              //   text: '数据结构与算法',
+              //   link: '/algorithm/', 
+              // },
               // {
               //   text: 'js设计模式',
               //   link: '/design-patterns/'
@@ -39,13 +46,6 @@ module.exports = {
             ]
           }
         ]
-      },
-      {
-        text: '源码分类',
-        items: [
-          { text: 'element-ui源码解析', link: '/element/' },
-          // { text: 'ts-axios', link: '/ts-axios/' },
-        ]
       }
     ],
     sidebar: {
@@ -53,7 +53,7 @@ module.exports = {
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
       '/leetcode/': getLeetcode(),
-      '/blog/': getBlog('JS', 'CSS', 'HTML')
+      '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
 }
@@ -76,7 +76,7 @@ function getElementUI() {
   ]
 }
 
-function getBlog(groupA, groupB, groupC) {
+function getBlog(groupA, groupB, groupC, groupD) {
   return [
     {
       title: groupA,
@@ -93,6 +93,13 @@ function getBlog(groupA, groupB, groupC) {
     },
     {
       title: groupB,
+      collapsable: false,
+      children: [
+        'HTTP/TCP',
+      ]
+    },
+    {
+      title: groupC,
       collapsable: false,
       children: [
         'CSS/selectors',
