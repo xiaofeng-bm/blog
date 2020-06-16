@@ -87,17 +87,18 @@ function getBlog(groupA, groupB, groupC, groupD) {
         'JS/number-precision',
         'JS/utils',
         'JS/scrollTo',
-        'JS/RegExp',
-        'JS/unique'
+        // 'JS/RegExp',
+        'JS/unique',
+        'JS/arrayMethods'
       ]
     },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'HTTP/TCP',
-      ]
-    },
+    // {
+    //   title: groupB,
+    //   collapsable: false,
+    //   children: [
+    //     'HTTP/TCP',
+    //   ]
+    // },
     {
       title: groupC,
       collapsable: false,
@@ -159,6 +160,7 @@ function getLeetcode() {
         '',
         'docs/1.两数之和',
         'docs/7.整数反转',
+        'docs/9.回文数',
         'docs/20.有效的括号',
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
