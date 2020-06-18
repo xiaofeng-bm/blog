@@ -52,7 +52,7 @@ module.exports = {
       '/element/': getElementUI(),
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
-      '/leetcode/': getLeetcode(),
+      '/leetcode/': getLeetcode('简单', '中等'),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
@@ -69,7 +69,7 @@ function getElementUI() {
         'docs/layout',
         // 'docs/input',
         'docs/notification',
-        // 'docs/form/base',
+        'docs/form/base',
         'docs/BmTable'
       ]
     }
@@ -152,15 +152,16 @@ function getDesignPatterns() {
 }
 
 // leetcode笔记
-function getLeetcode() {
+function getLeetcode(groupA, groupB) {
   return [
     {
+      title: groupA,
       collapsable: false,
       children: [
-        '',
         'docs/1.两数之和',
         'docs/7.整数反转',
         'docs/9.回文数',
+        'docs/14.最长公共前缀',
         'docs/20.有效的括号',
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
