@@ -161,6 +161,7 @@ function getLeetcode(groupA, groupB) {
         'docs/1.两数之和',
         'docs/7.整数反转',
         'docs/9.回文数',
+        'docs/13.罗马数字转整数',
         'docs/14.最长公共前缀',
         'docs/20.有效的括号',
         'docs/26.删除排序数组中的重复项',
