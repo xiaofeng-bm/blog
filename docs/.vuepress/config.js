@@ -173,7 +173,6 @@ function getLeetcode(groupA, groupB) {
       collapsable: false,
       children: [
         'docs/1.两数之和',
-        'docs/3. 无重复字符的最长子串',
         'docs/7.整数反转',
         'docs/9.回文数',
         'docs/13.罗马数字转整数',
