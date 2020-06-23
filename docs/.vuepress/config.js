@@ -14,6 +14,7 @@ module.exports = {
         text: '源码分类',
         items: [
           { text: 'element-ui源码解析', link: '/element/' },
+          { text: 'vue源码解析', link: '/vue/' }
           // { text: 'ts-axios', link: '/ts-axios/' },
         ]
       },
@@ -50,6 +51,7 @@ module.exports = {
     ],
     sidebar: {
       '/element/': getElementUI(),
+      '/vue/': getVue('组件本质', 'VNode'),
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
       '/leetcode/': getLeetcode('简单', '中等'),
@@ -71,6 +73,18 @@ function getElementUI() {
         'docs/notification',
         'docs/form/base',
         'docs/BmTable'
+      ]
+    }
+  ]
+}
+
+function getVue(A, B) {
+  return [
+    {
+      title: A,
+      collapsable: false,
+      children: [
+        'one/1.组件的产出是什么'
       ]
     }
   ]
@@ -159,6 +173,7 @@ function getLeetcode(groupA, groupB) {
       collapsable: false,
       children: [
         'docs/1.两数之和',
+        'docs/3. 无重复字符的最长子串',
         'docs/7.整数反转',
         'docs/9.回文数',
         'docs/13.罗马数字转整数',
@@ -167,6 +182,13 @@ function getLeetcode(groupA, groupB) {
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
         'docs/数组排序'
+      ]
+    },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        'docs/3. 无重复字符的最长子串'
       ]
     }
   ]

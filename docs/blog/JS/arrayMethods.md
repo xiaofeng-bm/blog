@@ -42,7 +42,10 @@ console.log(list) // [ '22' ]
 ## splice(index, num, value)<span style="color: red">改变原数组</span>
 splice() 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。
 ```js
-
+let list = ['11', '22', '33', '44'];
+let val = list.splice(0, 2);
+console.log(val)  // [ '11', '22' ]
+console.log(list) // [ '33', '44' ]
 ```
 
 ## reverse()<span style="color: red">改变原数组</span>
