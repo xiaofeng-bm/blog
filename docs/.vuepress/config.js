@@ -54,7 +54,7 @@ module.exports = {
       '/vue/': getVue('组件本质', 'VNode'),
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
-      '/leetcode/': getLeetcode('简单', '中等'),
+      '/leetcode/': getLeetcode('准备工作', '数据驱动', '组件化', '响应式原理', '编译'),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
@@ -78,15 +78,16 @@ function getElementUI() {
   ]
 }
 
-function getVue(A, B) {
+function getVue(A, B, C, D, E) {
   return [
     {
       title: A,
       collapsable: false,
       children: [
-        'one/1.组件的产出是什么'
+        'one/1.new Vue'
       ]
-    }
+    },
+    
   ]
 }
 
@@ -180,6 +181,7 @@ function getLeetcode(groupA, groupB) {
         'docs/20.有效的括号',
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
+        'docs/28.实现strStr',
         'docs/数组排序'
       ]
     },
