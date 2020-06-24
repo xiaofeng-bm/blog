@@ -54,7 +54,7 @@ module.exports = {
       '/vue/': getVue('组件本质', 'VNode'),
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
-      '/leetcode/': getLeetcode('准备工作', '数据驱动', '组件化', '响应式原理', '编译'),
+      '/leetcode/': getLeetcode('简单', '中等'),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
