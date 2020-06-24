@@ -84,7 +84,7 @@ function getVue(A, B, C, D, E) {
       title: A,
       collapsable: false,
       children: [
-        'one/1.new Vue'
+        // 'one/1.new Vue'
       ]
     },
     
