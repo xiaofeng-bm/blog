@@ -13,8 +13,8 @@ module.exports = {
       {
         text: '源码分类',
         items: [
-          { text: 'element-ui源码解析', link: '/element/' },
-          { text: 'vue源码解析', link: '/vue/' }
+          { text: 'Element-ui源码解析', link: '/element/' },
+          { text: 'Vue源码解析', link: '/vue/' }
           // { text: 'ts-axios', link: '/ts-axios/' },
         ]
       },
@@ -54,7 +54,7 @@ module.exports = {
       '/vue/': getVue('组件本质', 'VNode'),
       '/algorithm/': getAlgorithm(),
       '/design-patterns/': getDesignPatterns(),
-      '/leetcode/': getLeetcode('简单', '中等'),
+      '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
@@ -84,10 +84,16 @@ function getVue(A, B, C, D, E) {
       title: A,
       collapsable: false,
       children: [
-        'one/1.组件的本质'
+        'one/1.组件的本质&产出'
       ]
     },
-    
+    {
+      title: B,
+      collapsable: false,
+      children: [
+        'two/1.VNode如何表示'
+      ]
+    }
   ]
 }
 
@@ -167,7 +173,7 @@ function getDesignPatterns() {
 }
 
 // leetcode笔记
-function getLeetcode(groupA, groupB) {
+function getLeetcode(groupA, groupB, groupC, groupD) {
   return [
     {
       title: groupA,
@@ -191,6 +197,18 @@ function getLeetcode(groupA, groupB) {
       children: [
         'docs/3. 无重复字符的最长子串',
         'docs/11. 盛最多水的容器'
+      ]
+    },
+    {
+      title: groupC,
+      collapsable: false,
+      children: []
+    },
+    {
+      title: groupD,
+      collapsable: false,
+      children: [
+        'interview/1.合并排序数组'
       ]
     }
   ]
