@@ -84,7 +84,7 @@ function getVue(A, B, C, D, E) {
       title: A,
       collapsable: false,
       children: [
-        // 'one/1.new Vue'
+        'one/1.组件的本质'
       ]
     },
     
@@ -102,7 +102,7 @@ function getBlog(groupA, groupB, groupC, groupD) {
         'JS/number-precision',
         'JS/utils',
         'JS/scrollTo',
-        // 'JS/RegExp',
+        'JS/RegExp',
         'JS/unique',
         'JS/arrayMethods'
       ]
@@ -189,7 +189,8 @@ function getLeetcode(groupA, groupB) {
       title: groupB,
       collapsable: false,
       children: [
-        'docs/3. 无重复字符的最长子串'
+        'docs/3. 无重复字符的最长子串',
+        'docs/11. 盛最多水的容器'
       ]
     }
   ]

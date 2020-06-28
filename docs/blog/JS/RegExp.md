@@ -1,8 +1,9 @@
 # 正则表达式
 
 :::tip
-mdn: 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、matchAll、replace、search 和 split 方法。<br/>
-维基百科：正规表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。在很多文本编辑器里，正规表达式通常被用来检索、替换那些符合某个模式的文本。
+**mdn**: 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、matchAll、replace、search 和 split 方法。<br/>
+
+**维基百科**：正规表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。在很多文本编辑器里，正规表达式通常被用来检索、替换那些符合某个模式的文本。
 :::
 我更喜欢维基百科的描述。
 
@@ -22,6 +23,9 @@ table tbody tr td:nth-of-type(3) {
   color: #c90b33;
   background-color: rgba(27,31,35,0.05);
 }
+table tbody tr td:nth-child(2n) {
+  width: 50%;
+}
 table tbody tr:nth-child(2n) {
   background-color: transparent;
 }
@@ -30,22 +34,87 @@ table tbody tr:nth-child(2n) {
 | 参数 |  说明 | 参数 | 说明 |
 | ---- | -----| ---- | ---- |
 | [xyz]	 | 	一个字符集，匹配任意一个包含的字符 | [^xyz] | 一个否定字符集，匹配任何未包含的字符 |
-| \w | 	匹配字母或数字或者下划线的字符 | [^xyz] | 匹配不是字母，数字，下划线的字符 |
-| \s | 	匹配任意空白符 | [^xyz] | 匹配不是空白符的字符 |
-| \d | 	匹配数字  | [^xyz] | 匹配非数字的字符 |
-| \b | 	匹配单词的开始或结束的位置 | [^xyz] | 匹配不是单词开头或结束的位置 |
-| $	| 	匹配字符串的开始 | [^xyz] | 匹配字符串的结束 |
+| \w | 	匹配字母或数字或者下划线的字符 | [\W] | 匹配不是字母，数字，下划线的字符 |
+| \s | 	匹配任意空白符 | [\S] | 匹配不是空白符的字符 |
+| \d | 	匹配数字  | [\D] | 匹配非数字的字符 |
+| \b | 	匹配单词的开始或结束的位置 | [\B] | 匹配不是单词开头或结束的位置 |
+| ^	| 	匹配字符串的开始 | [$] | 匹配字符串的结束 |
+### 练习
+```js
+// [xyz]和[^xyz]
+/[ab]/.test('abc')     // true
+/[^ab]/.test('ab')     // false
+
+/[ab]/.test('bcd')     // true
+/[ab]/.test('cde')     // false
+
+// \w和\W
+/\w/.test('abc123_')   // true
+/\W/.test('abc123_')   // false
+
+/\w/.test('abc@#')     // true
+/\W/.test('abc@#')     // true
+
+/\w/.test('@#$')       // false
+/\W/.test('@#$')       // true
+// ^和$
+/^ab/.test('abcde')    // true
+/^ab/.test('bcdef')    // false
+/abc$/.test('123abc')  // true
+/abc$/.test('abc123')  // false
+...
+```
 
 
-使用正则表达式的方法
+## 重复相关的正则
+<style>
+table tbody tr td:first-of-type {
+  width: 50px;
+}
+</style>
+| 参数 | 说明 |
+| ---- | ---- |
+| * | 重复0次或者更多次 |
+| + | 重复1次或者更多次 |
+| ? | 重复0次或者1次 |
+| { n } | 重复n次 |
+| { n, } | 重复n次或者更多次 |
+| { n, m} | 重复n-m次 |
+
+### 练习
+```js
+// *和+
+/^[a]*@gmail$/.test('@gmail')         // true
+/^[a]+@gmail$/.test('@gmail')         // false
+
+// ?
+/^[a]?@gmail$/.test('@gmail')         // true
+/^[a]?@gmail$/.test('a@gmail')        // true
+/^[a]?@gmail$/.test('aaa@gmail')      // false
+
+// { n }
+/^[a]{2}@gmail$/.test('a@gmail')      // false
+/^[a]{2}@gmail$/.test('aa@gmail')     // true
+/^[a]{2}@gmail$/.test('aaa@gmail')    // false
+```
+
+## 正则表达式的方法
+上面一直是用正则的test方法判断字符串是否匹配，js中正则还有一些其它方法，如下：
 | 方法 | 说明 |
 | ---- | ---- |
-| exec |	一个在字符串中执行查找匹配的RegExp方法，它返回一个数组（未匹配到则返回 null）。
-| test |	一个在字符串中测试是否匹配的RegExp方法，它返回 true 或 false。
-| match |	一个在字符串中执行查找匹配的String方法，它返回一个数组，在未匹配到时会返回 null。
-| matchAll |	一个在字符串中执行查找所有匹配的String方法，它返回一个迭代器（iterator）。
-| search |	一个在字符串中测试匹配的String方法，它返回匹配到的位置索引，或者在失败时返回-1。
-| replace |	一个在字符串中执行查找匹配的String方法，并且使用替换字符串替换掉匹配到的子字符串。
-| split |	一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 String 方法。
+| exec |	一个在字符串中执行查找匹配的RegExp方法，它返回一个数组（未匹配到则返回 null）。|
+| test |	一个在字符串中测试是否匹配的RegExp方法，它返回 true 或 false。|
+| match |	一个在字符串中执行查找匹配的String方法，它返回一个数组，在未匹配到时会返回 null。|
+| matchAll |	一个在字符串中执行查找所有匹配的String方法，它返回一个迭代器（iterator）。|
+| replace |	一个在字符串中执行查找匹配的String方法，并且使用替换字符串替换掉匹配到的子字符串。|
+| search |	一个在字符串中测试匹配的String方法，它返回匹配到的位置索引，或者在失败时返回-1。|
+| split |	一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 String 方法。|
 
 当你想要知道在一个字符串中的一个匹配是否被找到，你可以使用 test 或 search 方法；想得到更多的信息（但是比较慢）则可以使用 exec 或 match 方法。
+
+正则中除了test方法外，exec方法经常用到。
+
+### exec
+```js
+
+```
