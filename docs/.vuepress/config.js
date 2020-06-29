@@ -166,6 +166,7 @@ function getDesignPatterns() {
       children: [
         'docs/1.设计模式',
         'docs/2.简单工厂模式',
+        'docs/3.抽象工厂模式'
       ]
     }
   ]
