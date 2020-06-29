@@ -28,14 +28,14 @@ module.exports = {
               //   text: '数据结构与算法',
               //   link: '/algorithm/', 
               // },
-              // {
-              //   text: 'js设计模式',
-              //   link: '/design-patterns/'
-              // },
               {
                 text: 'leetcode解题', 
                 link: '/leetcode/' 
-              }
+              },
+              {
+                text: 'js设计模式',
+                link: '/design-patterns/'
+              },
             ]
           },
           {
@@ -53,8 +53,8 @@ module.exports = {
       '/element/': getElementUI(),
       '/vue/': getVue('组件本质', 'VNode'),
       '/algorithm/': getAlgorithm(),
-      '/design-patterns/': getDesignPatterns(),
       '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
+      '/design-patterns/': getDesignPatterns(),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
@@ -164,9 +164,8 @@ function getDesignPatterns() {
     {
       collapsable: false,
       children: [
-        '',
-        'docs/面对对象',
-        'docs/工厂模式'
+        'docs/1.设计模式',
+        'docs/2.简单工厂模式',
       ]
     }
   ]
