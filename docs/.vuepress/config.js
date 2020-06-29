@@ -187,7 +187,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
         'docs/28.实现strStr',
-        'docs/680.验证回文字符串 Ⅱ',
+        'docs/680.验证回文字符串Ⅱ',
         'docs/数组排序'
       ]
     },
@@ -195,7 +195,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
       title: groupB,
       collapsable: false,
       children: [
-        'docs/3. 无重复字符的最长子串',
+        'docs/3.无重复字符的最长子串',
         'docs/11.盛最多水的容器',
         'docs/15.三数之和'
       ]
