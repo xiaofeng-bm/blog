@@ -188,6 +188,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
         'docs/28.实现strStr',
+        'docs/680.验证回文字符串 Ⅱ',
         'docs/数组排序'
       ]
     },
