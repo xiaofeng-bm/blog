@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: ./hero.jpg
-actionText: element-ui
-actionLink: /element/
+actionText: leetcode
+actionLink: /blog/leetcode/
 features:
 - title: 源码解析
   details: 包含element等源码的一些学习笔记
