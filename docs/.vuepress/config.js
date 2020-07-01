@@ -197,6 +197,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
       collapsable: false,
       children: [
         'docs/3.无重复字符的最长子串',
+        'docs/8.字符串转换整数',
         'docs/11.盛最多水的容器',
         'docs/15.三数之和'
       ]
