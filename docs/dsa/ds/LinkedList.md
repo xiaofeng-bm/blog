@@ -40,7 +40,10 @@ console.log(arr instanceof Object)  // true
 缺点也很明显，因为是一条链的关系，访问变慢了，只能从头一个个找，查找复杂度达到了On。
 
 ## 链表实现
-BB那么多，到实际中看看如何用js来实现一个链表吧
+BB那么多，来点实操。先来看看在js中如何用对象来描述一个链表。
 ```js
-
+let LinkedList = {
+  val: '',
+  
+}
 ```
