@@ -33,8 +33,12 @@ module.exports = {
                 link: '/leetcode/' 
               },
               {
-                text: 'js设计模式',
+                text: '设计模式',
                 link: '/design-patterns/'
+              },
+              {
+                text: '数据结构与算法',
+                link: '/dsa/'
               },
             ]
           },
@@ -55,6 +59,7 @@ module.exports = {
       '/algorithm/': getAlgorithm(),
       '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
       '/design-patterns/': getDesignPatterns(),
+      '/dsa/': getDSA('数据结构', '算法'),
       '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
     }
   },
@@ -168,6 +173,19 @@ function getDesignPatterns() {
         'docs/2.简单工厂模式',
         'docs/3.抽象工厂模式',
         'docs/4.单例模式',
+      ]
+    }
+  ]
+}
+
+// 数据结构与算法
+function getDSA(A, b) {
+  return [
+    {
+      title: A,
+      collapsable: false,
+      children: [
+        'ds/LinkedList.md'
       ]
     }
   ]
