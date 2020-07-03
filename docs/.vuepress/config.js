@@ -204,6 +204,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/13.罗马数字转整数',
         'docs/14.最长公共前缀',
         'docs/20.有效的括号',
+        'docs/21.合并两个有序链表',
         'docs/26.删除排序数组中的重复项',
         'docs/27.移除元素',
         'docs/28.实现strStr',
