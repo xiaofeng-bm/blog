@@ -51,6 +51,10 @@ module.exports = {
             ]
           }
         ]
+      },
+      {
+        text: 'GitHub',
+        link: 'https://github.com/xiaofeng-bm/blog'
       }
     ],
     sidebar: {
