@@ -227,7 +227,8 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/3.无重复字符的最长子串',
         'docs/8.字符串转换整数',
         'docs/11.盛最多水的容器',
-        'docs/15.三数之和'
+        'docs/15.三数之和',
+        'docs/82.删除排序链表中的重复元素II',
       ]
     },
     {
