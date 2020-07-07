@@ -177,6 +177,7 @@ function getDesignPatterns() {
         'docs/2.简单工厂模式',
         'docs/3.抽象工厂模式',
         'docs/4.单例模式',
+        'docs/5.原型模式',
       ]
     }
   ]
@@ -229,6 +230,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/11.盛最多水的容器',
         'docs/15.三数之和',
         'docs/82.删除排序链表中的重复元素II',
+        'docs/739.每日温度',
       ]
     },
     {
