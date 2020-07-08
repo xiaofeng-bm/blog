@@ -99,3 +99,20 @@ console.log(list) // [ '11', '22', '33', '44' ]
 ```
 
 ## indexOf(value)<span style="color: #67C23A">不改变原数组</span>
+indexOf() 方法返回调用它的 String 对象中第一次出现的指定值的索引，从 fromIndex 处进行搜索。如果未找到该值，则返回 -1。
+```js
+let list = ['11', '22', '33', '44'];
+const val1 = list.indexOf('44');
+const val2 = list.indexOf('55');
+console.log(val1)  // 3
+console.log(val2)  // -1
+```
+## concat(arr1, arr2, ...args)<span style="color: #67C23A">不改变原数组</span>
+concat() 方法用于合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组。
+```js
+let arr1 = ["11", "22"];
+let arr2 = ["33", "44"];
+let result = arr1.concat(arr2)
+console.log(result)       // [ '11', '22', '33', '44' ]
+```
+说明：现在大部分都用ES6的扩展运算符来写了。

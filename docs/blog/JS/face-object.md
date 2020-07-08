@@ -11,28 +11,13 @@
 ![face-object](../images/js/face_object.jpg)
 
 ## 工厂模式
-工厂模式听这取名就知道是类比自显示中的工厂。拿富士康iphone生产线来讲，给一系列原材料，比如摄像头，cpu，玻璃屏幕等等，就可以生产出一台台的iphone。用程序来表示如下：
-```js
-function iphone(camera, cpu, screen) {
-  // 中间省略一系列组装操作
-  // 返回一个iphone
-  return {
-    camera: camera,
-    cpu: cpu,
-    screen: screen
-  }
-}
-// 生产10000个iphone
-for (let i = 0; i < 10000; i++) {
-  iphone('索尼', '高通', '康宁大猩猩玻璃')
-}
-// 以上操作就能生产10000个搭载索尼摄像头，高通cpu，康宁大猩猩屏幕的ihpone手机
-```
-可以看出工程模式作用就是方便我们快速生产同一类型的实例（iphone）
+推荐阅读：<br/>
+[设计模式-简单工厂模式](../../design-patterns/docs/2.简单工厂模式)
 
 ## 函数
+:::tip
 [mdn](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions): 一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。
-
+:::
 在 JavaScript中，函数是头等(first-class)对象，因为它们可以像任何其他对象一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是Function对象。
 
 ### 函数的arguments
