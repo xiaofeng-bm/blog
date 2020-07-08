@@ -49,7 +49,38 @@ add(a, b)                 // 0.6                    正确
 ```
 减法同理
 
+## 精确乘法
+思路和加法差不多，也是转为整数后进行运算，运算完在转成小数。思路如下：
+- 1、以0.1*0.2=0.02为例，先将0.1 0.2转成整数1，2；
+- 2、整数运算1*2=2；
+- 3、2怎么转回到0.02，答案是2 / 10的((0.1小数位数+0.2小数位数))次方 = 0.02
+
+代码实现如下：
+```js
+let a = 0.1;
+let b = 0.2;
+console.log(a * b);           // 0.020000000000000004
+// 获取小数位数
+function digitLength(num) {
+  return num.toString().split(".")[1].length;
+}
+function multiply(num1, num2) {
+  // num1，num2转成整数
+  const num1Change = Number(num1.toString().replace(".", ""));
+  const num2Change = Number(num2.toString().replace(".", ""));
+  // 小数位数相加,将来还原为小数的时候用
+  const baseNum = digitLength(num1) + digitLength(num2);
+  // 整数相乘运算
+  const value = num1Change * num2Change;
+  
+  return value / Math.pow(10, baseNum);
+}
+console.log(multiply(a, b));    // 0.02
+```
+
 解决js中小数计算精度问题的思路就是转换为整数进行计算。<br/>
+
+注意哈，我上面的写法没处理边界条件等，只是说明思路，生产环境中推荐使用下面的`number-precision`库，代码量很少，如果不想安装的可以拷贝出来放到自己的项目中用。
 推荐阅读：
 [JavaScript 浮点数陷阱及解法](https://github.com/camsong/blog/issues/9)
 [number-precision](https://github.com/nefe/number-precision)
