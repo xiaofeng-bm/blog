@@ -216,6 +216,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/38.外观数列',
         'docs/58.最后一个单词的长度',
         'docs/83.删除排序链表中的重复元素',
+        'docs/155.最小栈',
         'docs/680.验证回文字符串Ⅱ',
         'docs/数组排序'
       ]
