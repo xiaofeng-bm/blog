@@ -4,12 +4,12 @@
 示例一：统计下面html字符串中span标签出现的次数
 ```js
 const html = `<div>
-              <span>姓名</span>
-              晓枫
-              <span>年龄</span>
-              22
-              <span>爱好</span>
-              coding
+                <span>姓名</span>
+                晓枫
+                <span>年龄</span>
+                22
+                <span>爱好</span>
+                coding
             </div>`
 const reg = /<span>.*?<\/span>/g
 let result = html.match(reg)
@@ -224,3 +224,4 @@ const result1 = reg1.exec(html)
 上面多加了个?就是**惰性匹配**了，匹配到第一个符合条件的就不继续往下了。参考示例一
 
 ## 正向前瞻&负向前瞻
+正向前瞻(`(?=)`)：
