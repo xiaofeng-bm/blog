@@ -245,7 +245,8 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
       title: groupD,
       collapsable: false,
       children: [
-        'interview/1.合并排序数组'
+        'interview/1.合并排序数组',
+        'interview/剑指 Offer 59 - I. 滑动窗口的最大值',
       ]
     }
   ]
