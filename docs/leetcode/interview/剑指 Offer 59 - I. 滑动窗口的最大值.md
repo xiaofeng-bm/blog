@@ -49,7 +49,8 @@ var maxSlidingWindow = function (nums, k) {
 // 空间复杂度：Ok
 ```
 这题做完感觉太简单了，就去评论区翻了翻，发现了下面这种接法。<br />
-解法二：双端队列
+
+解法二：双端队列 <br/>
 简单画个动图如下：
 ![interview59](../image/interview59.gif)
 ```js
