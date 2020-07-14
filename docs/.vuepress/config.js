@@ -114,6 +114,7 @@ function getBlog(groupA, groupB, groupC, groupD) {
       children: [
         '',
         'JS/face-object',
+        'JS/new',
         'JS/number-precision',
         'JS/utils',
         'JS/scrollTo',
