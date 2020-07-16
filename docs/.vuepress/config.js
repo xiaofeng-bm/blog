@@ -233,6 +233,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/11.盛最多水的容器',
         'docs/15.三数之和',
         'docs/46.全排列',
+        'docs/47.全排列II',
         'docs/71.简化路径',
         'docs/82.删除排序链表中的重复元素II',
         'docs/739.每日温度',
