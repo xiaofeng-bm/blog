@@ -232,6 +232,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/8.字符串转换整数',
         'docs/11.盛最多水的容器',
         'docs/15.三数之和',
+        'docs/17.电话号码的字母组合',
         'docs/46.全排列',
         'docs/47.全排列II',
         'docs/71.简化路径',
