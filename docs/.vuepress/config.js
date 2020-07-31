@@ -59,7 +59,7 @@ module.exports = {
     ],
     sidebar: {
       '/element/': getElementUI(),
-      '/vue/': getVue('组件本质', 'VNode'),
+      '/vue/': getVue('mini-vue'),
       '/algorithm/': getAlgorithm(),
       '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
       '/design-patterns/': getDesignPatterns(),
@@ -93,14 +93,9 @@ function getVue(A, B, C, D, E) {
       title: A,
       collapsable: false,
       children: [
-        'one/1.组件的本质&产出'
-      ]
-    },
-    {
-      title: B,
-      collapsable: false,
-      children: [
-        'two/1.VNode如何表示'
+        'mini-vue/01-目标',
+        'mini-vue/02-数据响应式',
+        'mini-vue/03-代理',
       ]
     }
   ]

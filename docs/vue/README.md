@@ -1,5 +1,4 @@
 # 简介
 Vue源码学习记录
 
-参考资料：
-[vue技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+计划分为两个部分，第一部分实现一个mini版的vue，初步了解vue2.x内部实现的一些原理。第二部分学习vue3.0的源码，并且做一些相应的记录
