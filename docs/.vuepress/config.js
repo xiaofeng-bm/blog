@@ -93,9 +93,10 @@ function getVue(A, B, C, D, E) {
       title: A,
       collapsable: false,
       children: [
-        'mini-vue/01-目标',
-        'mini-vue/02-数据响应式',
-        'mini-vue/03-代理',
+        'mini-vue/01-项目初始化',
+        'mini-vue/02-observer',
+        'mini-vue/03-proxy',
+        'mini-vue/04-compiler',
       ]
     }
   ]
@@ -115,7 +116,8 @@ function getBlog(groupA, groupB, groupC, groupD) {
         'JS/scrollTo',
         'JS/RegExp',
         'JS/unique',
-        'JS/arrayMethods'
+        'JS/arrayMethods',
+        "JS/EventBus"
       ]
     },
     // {
