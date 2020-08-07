@@ -2,6 +2,9 @@
 title: compiler模板解析
 date: 2020-08-05
 ---
+[源码地址](https://github.com/xiaofeng-bm/mini-vue)
+
+
 我们在写vue组件的模板`template`时，会参杂一些vue特有的语法进去，比如{{}}、v-html、v-model等等。这些东西浏览器肯定是不认识的，这节就来实现一下这几个功能。
 
 ## 前置知识
@@ -400,3 +403,8 @@ class Compiler {
 }
 export default Compiler;
 ```
+
+## 总结
+目前我们实现了模板编译，也实现了一些指令解析，如v-html、v-text、v-model等，你可以想想如v-if这种如何处理。
+
+另外我们写了一大堆代码才实现了几个元素的解析，从效率上来说，还不如我直接修改DOM来的块，下一节我们将添加观察者模式，实现监听到数据变化后，自动更新DOM的机制。
