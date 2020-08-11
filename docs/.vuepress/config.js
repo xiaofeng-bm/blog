@@ -176,6 +176,7 @@ function getDesignPatterns() {
         'docs/3.抽象工厂模式',
         'docs/4.单例模式',
         'docs/5.原型模式',
+        'docs/10.观察者模式',
       ]
     }
   ]
@@ -199,7 +200,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
   return [
     {
       title: groupA,
-      collapsable: false,
+      collapsable: true,
       children: [
         'docs/1.两数之和',
         'docs/7.整数反转',
@@ -224,7 +225,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
     },
     {
       title: groupB,
-      collapsable: false,
+      collapsable: true,
       children: [
         'docs/2.两数相加',
         'docs/3.无重复字符的最长子串',
@@ -244,14 +245,14 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
     },
     {
       title: groupC,
-      collapsable: false,
+      collapsable: true,
       children: [
         'docs/145.二叉树的后序遍历'
       ]
     },
     {
       title: groupD,
-      collapsable: false,
+      collapsable: true,
       children: [
         'interview/1.合并排序数组',
         'interview/剑指 Offer 59 - I. 滑动窗口的最大值',
