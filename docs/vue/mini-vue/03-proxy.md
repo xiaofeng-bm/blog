@@ -59,8 +59,8 @@ export default Vue;
 ## 测试
 按照上面分完组件后，整体代码功能就比之前清晰多了，现在来测试一下功能。在浏览器打开index.html。
 
-![1](../images/proxy1.png)
-![2](../images/proxy2.png)
+![](https://shiluyue.oss-cn-beijing.aliyuncs.com/proxy1.png)
+![](https://shiluyue.oss-cn-beijing.aliyuncs.com/proxy2.png)
 
 ## 总结
 这里我们已经实现了基本的两步，代理和数据响应式，下一节就该对html的模板进行解析。

@@ -214,6 +214,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/28.实现strStr',
         'docs/38.外观数列',
         'docs/58.最后一个单词的长度',
+        'docs/70.爬楼梯',
         'docs/83.删除排序链表中的重复元素',
         'docs/101.对称二叉树',
         'docs/155.最小栈',
