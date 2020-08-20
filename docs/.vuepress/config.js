@@ -97,6 +97,7 @@ function getVue(A, B, C, D, E) {
         'mini-vue/02-observer',
         'mini-vue/03-proxy',
         'mini-vue/04-compiler',
+        'mini-vue/05-reactivity',
       ]
     }
   ]
