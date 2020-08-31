@@ -59,7 +59,7 @@ module.exports = {
     ],
     sidebar: {
       '/element/': getElementUI(),
-      '/vue/': getVue('mini-vue'),
+      '/vue/': getVue('mini-vue', 'vue3.0'),
       '/algorithm/': getAlgorithm(),
       '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
       '/design-patterns/': getDesignPatterns(),
@@ -91,13 +91,27 @@ function getVue(A, B, C, D, E) {
   return [
     {
       title: A,
-      collapsable: false,
+      collapsable: true,
       children: [
         'mini-vue/01-项目初始化',
         'mini-vue/02-observer',
         'mini-vue/03-proxy',
         'mini-vue/04-compiler',
         'mini-vue/05-reactivity',
+      ]
+    },
+    {
+      title: B,
+      collapsable: true,
+      children: [
+        'vue3.0/vuejs3.0的变化',
+        {
+          title: 'reactivity',
+          collapsable: true,
+          children: [
+            'vue3.0/reactivity/01-响应式简介'
+          ]
+        }
       ]
     }
   ]
@@ -118,7 +132,8 @@ function getBlog(groupA, groupB, groupC, groupD) {
         'JS/RegExp',
         'JS/unique',
         'JS/arrayMethods',
-        "JS/EventBus"
+        "JS/EventBus",
+        "JS/防抖与节流"
       ]
     },
     // {
