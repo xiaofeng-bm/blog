@@ -23,7 +23,21 @@ const reg = /\b(\w+)(?=\.jpg)\b/g
 let result = str.match(reg)
 console.log(result)   // [ 'avatar', 'add' ]
 ```
-
+示例三：数字千分位分割符
+```js
+let num = 123456789
+function transform(num) {
+  // 先转成字符串
+  let str = num.toString();
+  return str.replace(/(?=(?!\b)(\d{3})+$)/g, ',')
+}
+```
+解释一下这个正则：
+- 1、首先全局搜索，加g，`//g`
+- 2、三个为一组, `(\d{3})+`
+- 3、添加正向前瞻，既(?=)，此时正则为`/(?=(\d{3}))/g`
+- 4、添加限制条件, `/(?=(\d{3})+$)/g`
+- 5、添加负向前瞻，`/(?=(?!\b)(\d{3})+$)/g`
 
 :::tip
 **mdn**: 正则表达式是用于匹配字符串中字符组合的模式。在 JavaScript中，正则表达式也是对象。这些模式被用于 RegExp 的 exec 和 test 方法, 以及 String 的 match、matchAll、replace、search 和 split 方法。<br/>
@@ -224,4 +238,17 @@ const result1 = reg1.exec(html)
 上面多加了个?就是**惰性匹配**了，匹配到第一个符合条件的就不继续往下了。参考示例一
 
 ## 正向前瞻&负向前瞻
-正向前瞻(`(?=)`)：
+正向前瞻(`x(?=y)`)：将只有x后面跟着y的x匹配出来：
+```js
+let reg = /x(?=y)/g
+let str = 'abcxyzxac'
+// 匹配到xyz中的x
+let result = reg.exec(str)  // [ 'x', index: 3, input: 'abcxyzxac', groups: undefined ]
+```
+负向前瞻(`x(?!y)`): 将只有x后面不紧跟着y的x匹配出来：
+```js
+let reg = /x(?!y)/g
+let str = 'abcxyzxac'
+// 匹配到xac中的x
+let result = reg.exec(str) // [ 'x', index: 6, input: 'abcxyzxac', groups: undefined ]
+```

@@ -63,8 +63,8 @@ module.exports = {
       '/algorithm/': getAlgorithm(),
       '/leetcode/': getLeetcode('简单', '中等', '困难', '面试真题'),
       '/design-patterns/': getDesignPatterns(),
-      '/dsa/': getDSA('数据结构', '算法'),
-      '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML')
+      // '/dsa/': getDSA('数据结构', '算法'),
+      '/blog/': getBlog('JS', 'HTTP', 'CSS', 'HTML', '其它')
     }
   },
 }
@@ -117,7 +117,7 @@ function getVue(A, B, C, D, E) {
   ]
 }
 
-function getBlog(groupA, groupB, groupC, groupD) {
+function getBlog(groupA, groupB, groupC, groupD, groupE) {
   return [
     {
       title: groupA,
@@ -150,7 +150,22 @@ function getBlog(groupA, groupB, groupC, groupD) {
         'CSS/selectors',
         'CSS/DOM树和CSSOM树',
         'CSS/重绘&重排',
-        'CSS/移动端屏幕适配'
+        'CSS/移动端屏幕适配',
+      ]
+    },
+    {
+      title: groupE,
+      collapsable: false,
+      children: [
+        {
+          title: 'Git',
+          collapsable: true,
+          children: [
+            'other/git/01-git',
+            'other/git/02-ignore',
+            'other/git/03-commit',
+          ]
+        }
       ]
     }
   ]
@@ -257,6 +272,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         'docs/94.二叉树的中序遍历',
         'docs/102.二叉树的层序遍历',
         'docs/144.二叉树的前序遍历',
+        'docs/322.零钱兑换',
         'docs/739.每日温度',
       ]
     },
