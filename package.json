@@ -1,12 +1,14 @@
 {
   "scripts": {
+    "cz": "npx git-cz",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.4.0",
-    "commitizen": "^4.0.3",
+    "commitizen": "^4.2.1",
+    "cz-conventional-changelog": "^3.3.0",
     "vuepress": "^1.4.0",
     "vuepress-theme-reco": "^1.2.2"
   },
@@ -14,5 +16,10 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "add": "^2.0.6",
+    "global": "^4.4.0",
+    "yarn": "^1.22.5"
   }
 }

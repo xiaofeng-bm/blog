@@ -56,6 +56,6 @@ let p1 = new Person('晓枫', 25)
 let p2 = createObj(Person, '晓枫', 25);
 console.log(p1, p2)
 ```
-![new](../images/js/new.png)
+![new](../../images/js/new.png)
 
 对比下来，一毛一样
