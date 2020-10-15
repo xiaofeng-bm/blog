@@ -9,7 +9,10 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
           title: '函数式编程',
           collapsable: false,
           children: [
-            'JS/FP/01-什么是函数式编程'
+            'JS/FP/01-函数式编程一',
+            'JS/FP/02-函数式编程二',
+            'JS/FP/03-promise源码一',
+            'JS/FP/04-promise源码二',
           ]
         }
       ],
