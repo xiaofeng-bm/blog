@@ -6,6 +6,13 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
       collapsable: false,
       children: [
         {
+          title: 'ES6+以及ts',
+          collapsable: false,
+          children: [
+            'JS/ES6/01-es新特性'
+          ]
+        },
+        {
           title: '函数式编程',
           collapsable: false,
           children: [
@@ -14,7 +21,8 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
             'JS/FP/03-promise源码一',
             'JS/FP/04-promise源码二',
           ]
-        }
+        },
+        
       ],
     },
     // {

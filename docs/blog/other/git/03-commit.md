@@ -23,3 +23,11 @@ npm install -g commitizen
 ```sh
 commitizen init cz-conventional-changelog --save --save-exact
 ```
+
+之后你提交的时候就可以按照如下方式提交了：
+```sh
+git add xxx
+
+# 执行git cz就会让你选择type，然后按照步骤一步步走就行
+git cz
+```
