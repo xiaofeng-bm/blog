@@ -6,6 +6,13 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
       collapsable: false,
       children: [
         {
+          title: 'ES6+',
+          collapsable: true,
+          children: [
+            'JS/ES6/01-es新特性',
+          ]
+        },
+        {
           title: '函数式编程',
           collapsable: false,
           children: [

@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: ./hero.jpg
-actionText: leetcode
-actionLink: /leetcode/
+actionText: 博客
+actionLink: /blog/
 features:
 - title: leetcode
   details: leetcode刷题记录
