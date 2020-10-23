@@ -10,7 +10,8 @@
     "commitizen": "^4.2.1",
     "cz-conventional-changelog": "^3.3.0",
     "vuepress": "^1.4.0",
-    "vuepress-theme-reco": "^1.2.2"
+    "vuepress-theme-reco": "^1.2.2",
+    "vue-router": "3.4.5"
   },
   "config": {
     "commitizen": {
