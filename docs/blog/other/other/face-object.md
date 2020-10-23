@@ -10,6 +10,7 @@
 知乎中找到一张描述面对对象中一些概念很经典的图。
 ![face-object](../../images/js/face_object.jpg)
 
+
 ## 工厂模式
 推荐阅读：<br/>
 [设计模式-简单工厂模式](../../..//design-patterns/docs/2.简单工厂模式)
