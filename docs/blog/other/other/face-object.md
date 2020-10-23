@@ -8,7 +8,7 @@
 
 ## 概念图示
 知乎中找到一张描述面对对象中一些概念很经典的图。
-![face-object](../../images/js/face_object.jpg)
+![face-object](../../images/JS/face_object.jpg)
 
 
 ## 工厂模式
