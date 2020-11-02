@@ -6,12 +6,12 @@
     "deploy": "bash deploy.sh"
   },
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.4.0",
-    "commitizen": "^4.2.1",
+    "@vuepress/plugin-medium-zoom": "^1.7.1",
+    "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
-    "vuepress": "^1.4.0",
-    "vuepress-theme-reco": "^1.2.2",
-    "vue-router": "3.4.5"
+    "vue-router": "^3.4.5",
+    "vuepress": "^1.7.1",
+    "vuepress-theme-reco": "^1.5.7"
   },
   "config": {
     "commitizen": {
@@ -21,6 +21,6 @@
   "dependencies": {
     "add": "^2.0.6",
     "global": "^4.4.0",
-    "yarn": "^1.22.5"
+    "yarn": "^1.22.10"
   }
 }

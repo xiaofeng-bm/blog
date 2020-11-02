@@ -7,6 +7,7 @@ module.exports = {
   description: "前端学习路上的记录、总结",
   port: 3001,
   themeConfig: {
+    subSidebar: 'auto',
     valineConfig: {
       appId: "dB2GgqbmVNSdxBwgmEF0M8uo-gzGzoHsz", // your appId
       appKey: "oTWmYn4vcYcbCHwUF73sSMXA", // your appKey

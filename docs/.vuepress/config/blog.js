@@ -3,13 +3,15 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
   return [
     {
       title: groupA,
-      collapsable: false,
+      collapsable: true,
       children: [
         {
           title: 'ES6+以及ts',
-          collapsable: false,
+          collapsable: true,
           children: [
-            'JS/ES6/01-es新特性'
+            'JS/ES6+&TS/01-es新特性',
+            'JS/ES6+&TS/02-ts基础',
+            'JS/ES6+&TS/03-js性能优化'
           ]
         },
         {
@@ -25,13 +27,13 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
         
       ],
     },
-    // {
-    //   title: groupB,
-    //   collapsable: false,
-    //   children: [
-    //     'HTTP/TCP',
-    //   ]
-    // },
+    {
+      title: groupB,
+      collapsable: false,
+      children: [
+        'HTTP/TCP',
+      ]
+    },
     {
       title: groupC,
       collapsable: false,
