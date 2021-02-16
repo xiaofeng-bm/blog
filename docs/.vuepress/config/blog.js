@@ -1,4 +1,3 @@
-
 function getBlog(groupA, groupB, groupC, groupD, groupE) {
   return [
     {
@@ -6,33 +5,35 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
       collapsable: true,
       children: [
         {
-          title: 'ES6+以及ts',
+          title: "JS基本功",
           collapsable: true,
-          children: [
-            'JS/ES6+&TS/01-es新特性',
-            'JS/ES6+&TS/02-ts基础',
-            'JS/ES6+&TS/03-js性能优化'
-          ]
+          children: ["JS/JS/01-JS数据类型"],
         },
         {
-          title: '函数式编程',
+          title: "ES6+以及ts",
+          collapsable: true,
+          children: [
+            "JS/ES6+&TS/01-es新特性",
+            "JS/ES6+&TS/02-ts基础",
+            "JS/ES6+&TS/03-js性能优化",
+          ],
+        },
+        {
+          title: "函数式编程",
           collapsable: false,
           children: [
-            'JS/FP/01-函数式编程一',
-            'JS/FP/02-函数式编程二',
-            'JS/FP/03-promise源码一',
-            'JS/FP/04-promise源码二',
-          ]
+            "JS/FP/01-函数式编程一",
+            "JS/FP/02-函数式编程二",
+            "JS/FP/03-promise源码一",
+            "JS/FP/04-promise源码二",
+          ],
         },
-        
       ],
     },
     {
       title: groupB,
       collapsable: false,
-      children: [
-        'HTTP/TCP',
-      ]
+      children: ["HTTP/TCP"],
     },
     {
       title: groupC,
@@ -58,7 +59,7 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
           ],
         },
         {
-          title: '零碎知识',
+          title: "零碎知识",
           collapsable: true,
           children: [
             "other/other/face-object",
@@ -77,5 +78,4 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
     },
   ];
 }
-module.exports = getBlog; 
-
+module.exports = getBlog;
