@@ -6,7 +6,6 @@ module.exports = {
   title: "晓枫博客",
   description: "前端学习路上的记录、总结",
   port: 3001,
-  head: [ 'link', { ref: 'icon', href: '/favicon.ico' } ],
   themeConfig: {
     subSidebar: 'auto',
     valineConfig: {
