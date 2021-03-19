@@ -111,7 +111,10 @@ function getVue(A, B, C, D, E) {
         {
           title: "reactivity",
           collapsable: true,
-          children: ["vue3.0/reactivity/01-响应式简介"],
+          children: [
+            "vue3.0/reactivity/01-响应式简介",
+            "vue3.0/reactivity/02-响应式原理二"
+          ],
         },
       ],
     },
@@ -210,6 +213,7 @@ function getLeetcode(groupA, groupB, groupC, groupD) {
         "docs/17.电话号码的字母组合",
         "docs/46.全排列",
         "docs/47.全排列II",
+        "docs/56.合并区间",
         "docs/71.简化路径",
         "docs/82.删除排序链表中的重复元素II",
         "docs/94.二叉树的中序遍历",

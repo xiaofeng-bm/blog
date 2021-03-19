@@ -7,7 +7,10 @@ function getBlog(groupA, groupB, groupC, groupD, groupE) {
         {
           title: "JS基本功",
           collapsable: true,
-          children: ["JS/JS/01-JS数据类型"],
+          children: [
+            "JS/JS/01-JS数据类型",
+            "JS/JS/02-JS实用方法"
+          ],
         },
         {
           title: "ES6+以及ts",
